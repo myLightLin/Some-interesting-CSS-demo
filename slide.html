@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .demo{width: 200px;padding-left:100px;padding-top: 10px;}
+        .element{
+            width: 200px;
+            padding-top: 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .25s;
+        }
+        :checked ~ .element{
+            max-height: 666px;
+        }
+        :checked ~ .check-out{
+            display: block;
+        }
+        :checked ~ .check-in{
+            display: none;
+        }
+        .check-in,.check-out{
+            color: blue;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .check-out{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 下拉效果 -->
+    <div class="demo">
+        <input type="checkbox" id="check" style="display:none">
+        <p>HTC 计划在 10 月 22 日推出区块链智能手机</p>
+        <div class="element">
+            <p>该公司一个有趣的发展方向就是决定推出名为 Exodus 的区块链智能手机 ... 该手机制造商在照片分享应用 Instagram 上为这个即将推出的区块链智能手机建造了一个新的页面</p>
+        </div>
+        <label for="check" class="check-in">更多↓</label>
+        <label for="check" class="check-out">收起↑</label>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹框</title>
+    <style>
+        .container{
+            position: fixed;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,.5);
+            text-align: center;
+            white-space: nowrap;
+            z-index: 99;
+        }
+        .container:after{
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+        .dialog{
+            background-color: #fff;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 6px;
+            text-align: left;
+            white-space: normal;
+            width: 400px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 弹框 -->
+    <div class="container">
+        <div class="dialog">
+            <div class="content">
+                我是内容
+            </div>
+        </div>
+    </div>
+</body>
+</html>
